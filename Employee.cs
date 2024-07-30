@@ -33,6 +33,5 @@ namespace YaoJosueAbotsidiaUA3Projet
             get => LastName; 
             set => LastName = value; 
         }
-
     }
 }
