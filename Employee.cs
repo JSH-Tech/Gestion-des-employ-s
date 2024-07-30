@@ -10,28 +10,36 @@ namespace YaoJosueAbotsidiaUA3Projet
     public abstract class Employee
     {
         // Propriétés
-        int Id;
-        string FirstName;
-        string LastName;
-        string Email;
+        int id;
+        string firstName;
+        string lastName;
+        string email;
 
-        public int Id1 { 
-            get => Id; 
-            set => Id = value; 
+        public int Id { 
+            get => this.id; 
+            set => this.id = value; 
         }
-        public string FirstName1 { 
-            get => FirstName; 
-            set => FirstName = value; 
+        public string FirstName { 
+            get => this.firstName; 
+            set => this.firstName = value; 
         }
 
 
-        public string Email1 { 
-            get => Email; 
-            set => Email = value; 
+        public string Email { 
+            get => this.email; 
+            set => this.email = value; 
         }
-        public string LastName1 { 
-            get => LastName; 
-            set => LastName = value; 
+        public string LastName { 
+            get => this.lastName; 
+            set => this.lastName = value; 
+        }
+
+        public Employee(int id, string firstName, string lastName, string email)
+        {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
         }
     }
 }
