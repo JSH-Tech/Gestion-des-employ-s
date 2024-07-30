@@ -12,13 +12,18 @@ namespace YaoJosueAbotsidiaUA3Projet
     {
         private string typeEmploye;
 
+        public EmployeeType(string typeEmploye)
+        {
+            this.typeEmploye = typeEmploye;
+        }
+
         public string TypeEmploye { 
             get => typeEmploye; 
             set => typeEmploye = value; 
         }
 
         // Méthode CalculatePayment
-        public abstract double CalculatePayment();
+        public abstract decimal CalculatePayment();
 
     }
 }

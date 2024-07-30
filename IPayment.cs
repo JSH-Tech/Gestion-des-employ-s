@@ -8,6 +8,6 @@ namespace YaoJosueAbotsidiaUA3Projet
 {
     public interface IPayment
     {
-        public abstract double CalculatePayment();
+        public abstract decimal CalculatePayment();
     }
 }
