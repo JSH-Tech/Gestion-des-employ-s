@@ -8,20 +8,14 @@ namespace YaoJosueAbotsidiaUA3Projet
 {
 
     // Classe abstraite EmployeeType
-    public abstract class EmployeeType
+    public abstract class EmployeeType:Employee, IPayment
     {
-        private string typeEmploye;
 
-        public EmployeeType(string typeEmploye)
+        protected EmployeeType(int id, string firstName, string lastName, string email) : base(id, firstName, lastName, email)
         {
-            this.typeEmploye = typeEmploye;
+            
         }
-
-        public string TypeEmploye { 
-            get => typeEmploye; 
-            set => typeEmploye = value; 
-        }
-
+        
         // Méthode CalculatePayment
         public abstract decimal CalculatePayment();
 
