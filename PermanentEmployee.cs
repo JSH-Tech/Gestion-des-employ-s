@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 namespace YaoJosueAbotsidiaUA3Projet
 {
     // Classe PermanentEmployee
-    public class PermanentEmployee:Employee,IPayment
+    public class PermanentEmployee:EmployeeType,IPayment
     {
         // Propriétés
         decimal salary;
         decimal fixedBonus;
         // Nombre d'heures travaillées par l'employé permanent
-        int hourNumber; 
+        int hourNumber;
 
         // Constructeur
-        public PermanentEmployee(int id, string firstName, string lastName, string email, decimal salary, decimal fixedBonus, int hourNumber)
-         : base(id, firstName, lastName, email)
+        public PermanentEmployee(int id, string firstName, string lastName, string email,decimal salary,decimal fixedBonus,int hourNumber)
+                                : base(id, firstName, lastName, email)
         {
             this.salary = salary;
-            this.fixedBonus = fixedBonus;
+            this.setFixedBonus(fixedBonus);
             this.hourNumber = hourNumber;
         }
 
@@ -42,7 +42,7 @@ namespace YaoJosueAbotsidiaUA3Projet
         }
 
         // Méthode CalculatePayment: Salary + FixedBonus + (HourNumber-40)*100;
-        public decimal CalculatePayment()
+        public override decimal CalculatePayment()
         {
             return Salary + FixedBonus + (HourNumber - 40) * 100;
         }
