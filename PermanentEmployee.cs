@@ -24,6 +24,12 @@ namespace YaoJosueAbotsidiaUA3Projet
             this.hourNumber = hourNumber;
         }
 
+        public PermanentEmployee(string firstName, string lastName, string email,decimal salary, decimal fixedBonus) : base( firstName, lastName, email)
+        {
+            this.salary = salary;
+            this.setFixedBonus(fixedBonus);
+        }
+
         public decimal Salary { 
             get => salary; 
             set => salary = value; 
