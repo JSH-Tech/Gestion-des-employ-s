@@ -10,10 +10,10 @@ namespace YaoJosueAbotsidiaUA3Projet
     public abstract class Employee
     {
         // Propriétés
-        int id;
-        string firstName;
-        string lastName;
-        string email;
+        private int id;
+        private string firstName;
+        private string lastName;
+        private string email;
 
         public int Id { 
             get => this.id; 
@@ -37,6 +37,13 @@ namespace YaoJosueAbotsidiaUA3Projet
         public Employee(int id, string firstName, string lastName, string email)
         {
             this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+        }
+
+        protected Employee(string firstName, string lastName, string email)
+        {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;

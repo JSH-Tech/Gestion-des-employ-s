@@ -10,6 +10,9 @@ namespace YaoJosueAbotsidiaUA3Projet
     // Classe abstraite EmployeeType
     public abstract class EmployeeType:Employee, IPayment
     {
+        protected EmployeeType(string firstName, string lastName, string email) : base(firstName, lastName, email)
+        {
+        }
 
         protected EmployeeType(int id, string firstName, string lastName, string email) : base(id, firstName, lastName, email)
         {
